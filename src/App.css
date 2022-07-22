@@ -1,38 +1,98 @@
-.App {
-  text-align: center;
+:root {
+    --accent: #7ba5dd;
+    --background-primary: #202b2e;
+    --background-secondary: #293538;
+    --background-secondary-alt: #47575d;
+    --foreground-primary: #c5c8c9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: DM Sans, sans-serif !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    background-color: var(--background-primary);
+    color: var(--foreground-primary);
+}
+.navbar .nav-item{
+    position: relative;
+}
+.navbar .nav-item .nav-link{
+    color: var(--foreground-primary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .nav-item .nav-link.active{
+    color: var(--foreground-primary)!important;
+    /* font-weight: 600; */
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav-item .nav-link:hover{
+    color: var(--accent);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar .nav-item:hover::before{
+    position: absolute;
+    content: '';
+    border-bottom: 2px solid var(--accent);
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
+
+
+
+.page-content {
+    /* background-color: #0b0f10; */
+    background-color: var(--background-primary);
+    /* color: #c5c8c9; */
+    color: var(--foreground-primary);
+    padding-top: 20px;
+    min-height: 100vh;
+}
+
+.page-content  .article .card {
+    background-color: var(--background-secondary);
+    transition:  0.8s;
+}
+
+.page-content .article .card .card-header{
+    background-color: var(--background-secondary-alt);
+}
+
+.page-content .article .card .card-header .btn-Group .button{
+    height: 24px;
+    line-height: 0.7;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.page-content .article .card  > a:hover {
+    background-color: var(--background-secondary-alt);
+}
+
+.page-content .article .card > a {
+    color: var(--foreground-primary);
+    text-decoration: none;
+    
+}
+
+.page-content .article .card .card-body .card-title{
+    color: var(--accent);
+}
+
+.page-content .article .card .number {
+    color: var(--accent);
+    background-color: var(--background-secondary-alt);
+    text-align: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+

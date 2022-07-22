@@ -1,0 +1,51 @@
+
+/**
+* Loading Page
+*/
+
+    
+.loading {
+    background-color: #FFF;
+    width: 100%;
+    display: inline-flex;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+.loading img {
+    display: block;
+    min-height: 209px;
+    min-width: 200px;
+    margin: auto;
+    user-select: none;
+}
+
+.mouse {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #fff782;
+    position: absolute;
+    animation: mouseAnimation .5s 2 ease-in-out alternate;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+@keyframes mouseAnimation {
+    
+    0% {
+        width: 25px;
+        height: 25px
+    }
+    
+    50% {
+        width: 15px;
+        height: 15px
+    }
+    
+}
+
